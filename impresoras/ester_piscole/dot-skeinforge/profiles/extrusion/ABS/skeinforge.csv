@@ -1,0 +1,9 @@
+Format is tab separated skeinforge settings.
+_Name                          	Value
+WindowPosition	258+30
+Open File for Skeinforge	/home/renosis/Downloads/EscapementTestJig-FewerTeeth-Thicker-Pendulum.stl
+analyze	False
+craft	True
+help	False
+meta	False
+profile	False
