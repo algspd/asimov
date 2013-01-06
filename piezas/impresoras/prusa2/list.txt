@@ -18,3 +18,5 @@ jonaskuehling_gregs-wade x1
 biggearmod_fixed         x1
 smallgearmod_fixed       x1
 zmotor_fixed             x2
+
+You can print "gregs-x-carriage" as an alternative for "x-carriage".
