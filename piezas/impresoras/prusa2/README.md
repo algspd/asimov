@@ -1,3 +1,6 @@
+Prusa 2
+=====
+
 To make a prusa2 Rep Rap printer you will need:
 
 bar-clamp                x8
