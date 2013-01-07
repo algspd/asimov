@@ -6,6 +6,7 @@ Prusa 3
 * y-axis-corner        x4
 * biggearmod_fixed     x1
 * gregs-wade-v3-motor  x1
+* gregs-...-idler-...  x1
 * smallgearmod_fixed   x1
 * x-carriage           x1
 * x-end-idler-abs      x1
