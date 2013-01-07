@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Arduino - AnalogReference </title>
+  <link rel='stylesheet' href='arduino.css' type='text/css' />
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+</head>
+<body>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href="http://www.arduino.cc"/>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->    <FORM method=GET action="http://www.google.com/search">    <input type=hidden name=ie value=UTF-8>    <input type=hidden name=oe value=UTF-8>    <INPUT TYPE=text name=q size=25 maxlength=255 value="">    <INPUT type=submit name=btnG VALUE="search">    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav" style="text-align: right">
+  <div style="float: left;">
+  <p><a class='wikilink' href='http://arduino.cc/en/Main/Buy'>Buy</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Main/Software'>Download</a>
+|
+<a class='wikilink' href='Guide_index.html'>Getting Started</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Tutorial/HomePage'>Learning</a>
+|
+<a class='wikilink' href='index.html'>Reference</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Main/Hardware'>Hardware</a>
+|
+<a class='wikilink' href='FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+  <a class="urllink" href="http://www.arduino.cc/blog/" rel="nofollow">Blog &raquo;</a> |
+  <a class="urllink" href="http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl" rel="nofollow">Forum &raquo;</a> |
+  <a class="urllink" href="http://www.arduino.cc/playground/" rel="nofollow">Playground &raquo;</a>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='index.html'>Language</a> (<a class='wikilink' href='Extended.html'>extended</a>) | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
+</p>
+<p class='vspace'></p><h2>analogReference(type)</h2>
+<h4>Description</h4>
+<p>Configures the reference voltage used for analog input.  The analogRead() function will return 1023 for an input equal to the reference voltage.  The options are:
+</p>
+<p class='vspace'></p><ul><li>DEFAULT: the default analog reference of 5 volts.
+</li><li>INTERNAL: an built-in reference, equal to 1.1 volts on the <span class='wikiword'>ATmega168</span> and 2.56 volts on the <span class='wikiword'>ATmega8</span>.
+</li><li>EXTERNAL: the voltage applied to the AREF pin is used as the reference.
+</li></ul><p class='vspace'></p><h4>Parameters</h4>
+<p>type: which type of reference to use (DEFAULT, INTERNAL, or EXTERNAL).
+</p>
+<p class='vspace'></p><h4>Returns</h4>
+<p>None.
+</p>
+<p class='vspace'></p><h4>Warning</h4>
+<p>It is a good idea to connect external voltages to the AREF pin through a 5K resistor. This will prevent possible internal damage to the Atmega chip if analogReference() software settings are incompatible with the current hardware setup. Note that the resistor will alter the voltage that gets used as the reference because there is an internal 32K resistor on the AREF pin. The two act as a voltage divider, so, for example, 2.5V applied through the resistor will yield ~2.2V at the AREF pin.
+</p>
+<p class='vspace'></p><p>Connecting external voltages through a resistor makes it possible to switch the AREF voltage on the fly, say from the 5 volt DEFAULT setting, to a 3.3 volt EXTERNAL setting (and applied voltage), without the hardware setup affecting either ADC configuration.
+</p>
+<p class='vspace'></p><h4>Use of the AREF pin</h4>
+<p>The voltage applied to the AREF pin directly governs the ADC and sets the voltage at which the ADC will report its highest reading, 1023. Lower voltages applied to ADC (analog) pins will be scaled proportionally, so at the DEFAULT setting (5 volt internal connection), 2.5 volts on an analog pin will report approximately 512.
+</p>
+<p class='vspace'></p><p>The default configuration on all Arduino implementations is to have nothing connected externally to the AREF pin (Atmega pin 21). In this case the DEFAULT analogReference software setting connects the AVCC voltage, internally, to the AREF pin. This appears to be a low impedance connection (high current) and voltages, other than  AVCC, applied (erroneously) to the AREF pin in the DEFAULT setting could damage the ATMEGA chip. 
+</p>
+<p class='vspace'></p><p>The AREF pin may also be connected internally to an  (internal) 1.1 volt source (or 2.56 on the <span class='wikiword'>ATmega8</span>) with analogReference(INTERNAL). With this setting voltages applied to the ADC (analog) pins that are at or above the reference will report 1023 when read with analogRead. Lower voltages will report proportional values, so 0.55 volts will report about 512.
+</p>
+<p class='vspace'></p><p>The connection between the 1.1 volt source and the AREF pin is a very high impedance (low current) connection, so that reading the 1.1 (internally supplied) voltage at the AREF pin may only be done with a more expensive, high-impedance multimeter. An external voltage applied (erroneously) to AREF pin while using the INTERNAL setting will not damage the chip, but will totally override the 1.1 volt source, and ADC readings will be governed by the external voltage. It is still desirable to connect any external voltage to the AREF pin however, through a 5K resistor to avoid the problem cited above.
+</p>
+<p class='vspace'></p><p>The correct software setting for using the AREF pin with an external voltage is analogReference(EXTERNAL). This disconnects both of the internal references and the voltage applied externally to the AREF pin sets the reference voltage for the ADC.
+</p>
+<p class='vspace'></p><h4>See also</h4>
+<ul><li><a class='wikilink' href='http://arduino.cc/en/Tutorial/AnalogInputPins'>Description of the analog input pins</a>
+</li><li><a class='wikilink' href='AnalogRead.html'>analogRead</a>()
+</li></ul><p class='vspace'></p><p><a class='wikilink' href='index.html'>Reference Home</a>
+</p>
+<p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?board=swbugs' rel='nofollow'>Forum</a>.</em>
+</p>
+<p class='vspace'></p><p>The text of the Arduino reference is licensed under a
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the reference are released into the public domain.
+</p>
+</div>
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+  <a href='#'>Edit Page</a> | <a href='#'>Page History</a> | <a href='#' target='_blank'>Printable View</a> | <a href='http://arduino.cc/en/Site/AllRecentChanges'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Arduino - MacOSX </title>
+  <link rel='stylesheet' href='arduino.css' type='text/css' />
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+</head>
+<body>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href="http://www.arduino.cc"/>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->    <FORM method=GET action="http://www.google.com/search">    <input type=hidden name=ie value=UTF-8>    <input type=hidden name=oe value=UTF-8>    <INPUT TYPE=text name=q size=25 maxlength=255 value="">    <INPUT type=submit name=btnG VALUE="search">    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav" style="text-align: right">
+  <div style="float: left;">
+  <p><a class='wikilink' href='http://arduino.cc/en/Main/Buy'>Buy</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Main/Software'>Download</a>
+|
+<a class='wikilink' href='Guide_index.html'>Getting Started</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Tutorial/HomePage'>Learning</a>
+|
+<a class='wikilink' href='index.html'>Reference</a>
+|
+<a class='wikilink' href='http://arduino.cc/en/Main/Hardware'>Hardware</a>
+|
+<a class='wikilink' href='FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+  <a class="urllink" href="http://www.arduino.cc/blog/" rel="nofollow">Blog &raquo;</a> |
+  <a class="urllink" href="http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl" rel="nofollow">Forum &raquo;</a> |
+  <a class="urllink" href="http://www.arduino.cc/playground/" rel="nofollow">Playground &raquo;</a>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<h2>How To Get Arduino Running on Mac OS X (10.3.9 or later)</h2>
+<p><em>This document explains how to connect your Arduino board to the computer and upload your first sketch.</em>
+</p>
+<p class='vspace'></p><p>These are the steps that we'll go through:
+</p>
+<p class='vspace'></p><ol><li>Get an Arduino board and cable
+</li><li>Download the Arduino environment
+</li><li>Install the USB drivers
+</li><li>Connect the board
+</li><li>Run the Arduino environment
+</li><li>Upload a program
+</li><li>Look for the blinking LED
+</li><li>Learn to use Arduino
+</li></ol><p class='vspace'></p><h3>1 | Get an Arduino board and cable</h3>
+<p>In this tutorial, we assume you're using an Arduino Duemilanove or Diecimila.  If you have another board, read the corresponding page in this getting started guide.
+</p>
+<p class='vspace'></p><p>The Arduino is a simple board that contains everything you need to start working with electronics and microcontroller programming.  This diagram illustrates the major components of an Arduino Diecimila.  (The Arduino Duemilanove is almost identical.)
+</p>
+<p class='vspace'></p><div><img src='http://arduino.cc/en/uploads/Guide/ArduinoDiecimilaComponents.jpg' alt='' title='' /></div>
+<p class='vspace'></p><p>You also need a standard USB cable (A plug to B plug): the kind you would connect to a USB printer, for example.
+</p>
+<p class='vspace'></p><h3>2 | Download the Arduino environment</h3>
+<p>To program the Arduino board you need the Arduino environment.
+</p>
+<p class='vspace'></p><p><strong>Download</strong>:  the latest version from the <a class='wikilink' href='http://arduino.cc/en/Main/Software'>download page</a>.
+</p>
+<p class='vspace'></p><p>When the download finishes, unzip the downloaded file.  Make sure to preserve the folder structure.  Double-click the folder to open it.  There should be a few files and sub-folders inside.
+</p>
+<p class='vspace'></p><h3>3 | Install the USB drivers</h3>
+<p>If you are using a USB Arduino, you will need to install the drivers for the FTDI chip on the board.  These can be found in the <strong>drivers</strong> directory of the Arduino distribution.
+</p>
+<p class='vspace'></p><p>You'll need to select the correct drivers for your computer.  Use:
+</p><ul><li><strong><span class='wikiword'>FTDIUSBSerialDriver</span>_v2_1_9.dmg</strong> for older (PPC) Macs like the Powerbook, iBook, G4 or G5
+</li><li><strong><span class='wikiword'>FTDIUSBSerialDriver</span>_v2_2_9_Intel.dmg</strong> for newer (Intel) Macs like the <span class='wikiword'>MacBook</span>, <span class='wikiword'>MacBook</span> Pro, or Mac Pro
+</li></ul><p class='vspace'></p><p>(The latest version of the drivers can be found on the <a class='urllink' href='http://www.ftdichip.com/Drivers/VCP.htm' rel='nofollow'>FTDI website</a>.)
+</p>
+<p class='vspace'></p><h3>4 | Connect the board</h3>
+<p>On the Diecimila, the power source is selected by the jumper between the USB and power plugs.  To power the board from the USB port (good for controlling low power devices like <span class='wikiword'>LEDs</span>), place the jumper on the two pins closest to the USB plug.  To power the board from an external power supply (6-12V), place the jumper on the two pins closest to the power plug.  On the Duemilanove, the power source is selected automatically (there is no power selection jumper).  In any case, connect the board to a USB port on your computer. 
+</p>
+<p class='vspace'></p><p>The green power LED (labelled <strong>PWR</strong>) should go on.
+</p>
+<p class='vspace'></p><h3>5 | Run the Arduino environment</h3>
+<p>(Mac OSX): Copy the Arduino application to your Applications directory.  Double-click the Arduino application.
+</p>
+<p class='vspace'></p><p>(Windows): Open the Arduino folder and double-click the Arduino application.
+</p>
+<p class='vspace'></p><h3>6 | Upload a program</h3>
+<p>Open the LED blink example sketch: <strong>File &gt; Sketchbook &gt; Examples &gt; Digital &gt; Blink</strong>.
+</p>
+<p class='vspace'></p><p>Select the serial device of the Arduino board from the <strong>Tools &gt; Serial Port</strong> menu.  On the Mac, this should be something with <strong>/dev/tty.usbserial</strong> in it.
+</p>
+<p class='vspace'></p><p>You'll need to select the entry in the <strong>Tools &gt; Board</strong> menu that corresponds to your Arduino.  For newer Arduino boards with an <span class='wikiword'>ATmega328</span> (check the text on the chip on the board), select <strong>Arduino Duemilanove w/ <span class='wikiword'>ATmega328</span></strong>.  Previously, Arduino boards came with an <span class='wikiword'>ATmega168</span>; for those, select <strong>Arduino Diecimila or Duemilanove w/ <span class='wikiword'>ATmega168</span></strong>.
+</p>
+<p class='vspace'></p><p>Now, simply click the "Upload" button in the environment.  Wait a few seconds - you should see the RX and TX leds on the board flashing.  If the upload is successful, the message "Done uploading." will appear in the status bar.  (<em>Note:</em> If you have an Arduino Mini, NG, or other board, you'll need to physically present the reset button on the board immediately before pressing the upload button.)
+</p>
+<p class='vspace'></p><div><img src='http://arduino.cc/en/uploads/Guide/UploadButton.png' alt='' title='' /></div>
+<p class='vspace'></p><h3>7 | Look for the blinking LED</h3>
+<p>A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange).  If it does, congratulations!  You've gotten Arduino up-and-running.
+</p>
+<p class='vspace'></p><p>If you have problems, please see the <a class='wikilink' href='Guide_Troubleshooting.html'>troubleshooting suggestions</a>.
+</p>
+<p class='vspace'></p><h3>8 | Learn to use Arduino</h3>
+<ul><li><a class='wikilink' href='http://arduino.cc/en/Tutorial/HomePage'>Examples</a>: try these example programs.
+</li><li><a class='wikilink' href='index.html'>Reference</a>: read the reference for the Arduino language.
+</li></ul><p>The text of the Arduino getting started guide is licensed under a
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the guide are released into the public domain.
+</p>
+</div>
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+  <a href='Guide_MacOSX?action=edit.html'>Edit Page</a> | <a href='Guide_MacOSX?action=diff.html'>Page History</a> | <a href='Guide_MacOSX?action=print.html' target='_blank'>Printable View</a> | <a href='http://arduino.cc/en/Site/AllRecentChanges'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+</body>
+</html>

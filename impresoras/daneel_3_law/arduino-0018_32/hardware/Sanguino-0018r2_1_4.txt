@@ -1,0 +1,75 @@
+Sanguino-0018r2 install instructions Rev2_1_4 teamCBA 23/06/2010
+============================================================
+
+While the lost of function of the Serial.read command is being traced, here is an interim
+Sanguino Hardware folder.
+It is based on 1.14r1 files. This returns the Serial.read function,
+but loses the commands introduced in Arduino IDE 0018.
+
+Also fixed is the correct bootloader file name.
+
+Rev2 adds file modified by user "unaimed", please try these out and report any issues. Thanks unaimed
+
+
+
+Tested on Windows XP SP3
+
+
+The release of Arduino 0018 has eased the intergration of third part boards, here are
+the instructions of how to add support for the Sanguino into 0018.
+
+It is best to start with a fresh install of Arduino IDE 0018.
+
+Unzip Sanguino-0018r1_1_4, you will have a folder called Sanguino.
+
+For the purpose of these instructions, i have the IDE installed at C:\Arduino0018\
+
+open the Arduino IDE folder and then the hardware folder, there will be 2 folders there
+already, "Arduino" and "tools"
+
+C:\
+____Arduino0018
+________________hardware
+_________________________arduino
+_________________________tools
+
+
+
+copy (drag n drop) the Sanguino folder into the hardware folder
+
+
+C:\
+____Arduino0018
+________________hardware
+_________________________arduino
+_________________________tools
+_________________________Sanguino
+
+
+
+Run Arduino IDE, click on Tool then boards and you will see Sanguino is now listed, 
+Select Sanguino as your board and you're sorted.
+
+
+
+
+Many thanks to the Creators of Arduino and maintainers of the Arduino IDE and to the 
+Creators of the Sanguino.
+
+
+The libraries are modified versions of the ones included with Arduino 0018 and have been
+Modified by teamCBA to work with the Sanguino, which is based on the ATMega644p.
+
+
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+
+
