@@ -1,0 +1,22 @@
+* plate1_prusa3.stl
+ - 4 x y-axis-corner
+ - 4 x y-axis-bracket
+ - 4 x bushing
+ - 3 x endstop-holder
+ - 2 x pulley
+ - z-axis_..._left
+ - z-axis_..._right
+ - z-axis-motor-left
+ - z-axis-motor-right
+ - y-drivetrain-idler
+ - y-drivetrain-motor
+
+* plate2_prusa3.stl
+ - biggearmod_fixed     x1
+ - gregs-wade-v3-motor  x1
+ - gregs-...-idler-...  x1
+ - x-carriage           x1
+ - x-end-idler-abs      x1
+ - x-end-motor-abs      x1
+ - y-belt-holder        x1
+ - coupling             x2
