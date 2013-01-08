@@ -19,5 +19,6 @@ Prusa 3
 * z-axis-motor-left    x1
 * z-axis-motor-right   x1
 * coupling             x2
+* pulley               x2
 * j-head-mount         optional x1
 * retainer bed         optional x2
