@@ -2,7 +2,7 @@ Format is tab separated raft settings.
 _Name                          	Value
 WindowPosition	700+0
 Open File for Raft	
-Activate Raft	True
+Activate Raft	False
 Add Raft, Elevate Nozzle, Orbit:	False
 Base Feed Rate Multiplier (ratio):	1.0
 Base Flow Rate Multiplier (ratio):	1.0
@@ -26,8 +26,8 @@ Raft Margin (mm):	3.0
 Support Cross Hatch	False
 Support Flow Rate over Operating Flow Rate (ratio):	1.0
 Support Gap over Perimeter Extrusion Width (ratio):	1.0
-None	True
+None	False
 Empty Layers Only	False
-Everywhere	False
+Everywhere	True
 Exterior Only	False
-Support Minimum Angle (degrees):	60.0
+Support Minimum Angle (degrees):	40.0
