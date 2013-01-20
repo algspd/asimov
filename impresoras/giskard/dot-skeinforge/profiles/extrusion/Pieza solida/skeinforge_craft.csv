@@ -4,7 +4,7 @@ WindowPosition	600+0
 Open File for Craft	
 alteration	False
 bottom	False
-carve	True
+carve	False
 chamber	False
 chop	False
 cleave	False
@@ -28,7 +28,7 @@ lash	False
 lift	False
 limit	False
 mill	False
-multiply	False
+multiply	True
 oozebane	False
 outset	False
 preface	False
