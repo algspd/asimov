@@ -97,7 +97,7 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
         self.capture_skip={}
         self.capture_skip_newline=False
         self.tempreport=""
-        self.monitor=0
+        self.monitor=1
         self.f=None
         self.skeinp=None
         self.monitor_interval=3
@@ -526,6 +526,7 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
         self.monitorbox=wx.CheckBox(self.panel,-1,_("Monitor Printer"))
         uts.Add(self.monitorbox,0,wx.ALIGN_CENTER)
         self.monitorbox.Bind(wx.EVT_CHECKBOX,self.setmonitor)
+	self.monitorbox.SetValue(1)
 
         uts.Add((15,-1),flag=wx.EXPAND)
         uts.Add(self.minibtn,0,wx.ALIGN_CENTER)
@@ -1564,6 +1565,7 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
             self.set("port",port)
         if baud != self.settings.baudrate:
             self.set("baudrate",str(baud))
+	self.setmonitor(None)
         threading.Thread(target=self.statuschecker).start()
 
 
