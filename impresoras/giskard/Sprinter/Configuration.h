@@ -82,7 +82,7 @@ const int Z_MAX_LENGTH = 300;
 
 //// MOVEMENT SETTINGS
 const int NUM_AXIS = 4; // The axis order in all axis related arrays is X, Y, Z, E
-float max_feedrate[] = {500000, 500000, 240, 50000};
+float max_feedrate[] = {500000, 500000, 160, 50000};
 float homing_feedrate[] = {10000,10000,160};
 bool axis_relative_modes[] = {false, false, false, false};
 
