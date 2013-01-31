@@ -23,7 +23,7 @@
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
 
-float axis_steps_per_unit[] = {83,83,3900,700};
+float axis_steps_per_unit[] = {81.293,81.293,3900,700};
 // Metric Prusa Mendel with Makergear geared stepper extruder:
 //float axis_steps_per_unit[] = {80,80,3200/1.25,1380}; 
 // MakerGear Hybrid Prusa Mendel:
@@ -82,8 +82,8 @@ const int Z_MAX_LENGTH = 300;
 
 //// MOVEMENT SETTINGS
 const int NUM_AXIS = 4; // The axis order in all axis related arrays is X, Y, Z, E
-float max_feedrate[] = {200000, 200000, 240, 15000};
-float homing_feedrate[] = {6000,6000,160};
+float max_feedrate[] = {500000, 500000, 240, 50000};
+float homing_feedrate[] = {10000,10000,160};
 bool axis_relative_modes[] = {false, false, false, false};
 
 // Min step delay in microseconds. If you are experiencing missing steps, try to raise the delay microseconds, but be aware this
@@ -101,8 +101,8 @@ bool axis_relative_modes[] = {false, false, false, false};
 #ifdef RAMP_ACCELERATION
 // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 float max_start_speed_units_per_second[] = {20.0,20.0,0.2,30.0};
-long max_acceleration_units_per_sq_second[] = {500,500,50,10000}; // X, Y, Z and E max acceleration in mm/s^2 for printing moves or retracts
-long max_travel_acceleration_units_per_sq_second[] = {500,500,50,500}; // X, Y, Z max acceleration in mm/s^2 for travel moves
+long max_acceleration_units_per_sq_second[] = {1000,1000,50,10000}; // X, Y, Z and E max acceleration in mm/s^2 for printing moves or retracts
+long max_travel_acceleration_units_per_sq_second[] = {1000,1000,50,500}; // X, Y, Z max acceleration in mm/s^2 for travel moves
 #endif
 
 // Machine UUID

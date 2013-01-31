@@ -12,7 +12,7 @@ clip	False
 coil	False
 comb	False
 cool	False
-dimension	True
+dimension	False
 drill	False
 dwindle	False
 export	False
@@ -28,7 +28,7 @@ lash	False
 lift	False
 limit	False
 mill	False
-multiply	False
+multiply	True
 oozebane	False
 outset	False
 preface	False
