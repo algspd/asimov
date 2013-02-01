@@ -6,7 +6,7 @@ remotehost=p_giskard@pulsar.unizar.es
 #echo "Borrando .skeinforge remoto"
 #ssh $remotehost 'rm -rf .skeinforge'
 echo "Copiando .skeinforge"
-rsync -avzP ~/.skeinforge/ p_ester@pulsar.unizar.es:
+rsync -avzPL ~/.skeinforge/ p_ester@pulsar.unizar.es:
 #scp -r ~/.skeinforge/ $remotehost:
 
 # Copio el .stl al home de pulsar del usuario corresponiente
