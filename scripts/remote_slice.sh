@@ -6,7 +6,7 @@ remotehost=p_ester@pulsar.unizar.es
 #echo "Borrando .skeinforge remoto"
 #ssh $remotehost 'rm -rf .skeinforge'
 echo "Copiando .skeinforge"
-rsync -avzP ../.skeinforge/ p_ester@pulsar.unizar.es:
+rsync -avzP ~/.skeinforge/ p_ester@pulsar.unizar.es:
 #scp -r ~/.skeinforge/ $remotehost:
 
 # Copio el .stl al home de pulsar del usuario corresponiente
@@ -16,3 +16,4 @@ scp "$1" $remotehost:stl/
 ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)"
 
 scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $outname
+
