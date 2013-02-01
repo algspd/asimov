@@ -8,4 +8,4 @@ set e_feedrate 150
 set baudrate 115200
 set bedtemp_abs 120
 set temperature_abs 220
-set slicecommand /home/asimov/scripts/remote_slice.sh $s $o
+set slicecommand /home/asimov/impresoras/ester_piscole/scripts/remote_slice.sh $s $o
