@@ -1352,6 +1352,7 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
                 o = self.skeinp.stdout.read(1)
                 if o == '' and self.skeinp.poll() != None: break
                 sys.stdout.write(o)
+                if self.stopsf == 1: break
             self.skeinp.wait()
             self.stopsf=1
         except:
@@ -1399,8 +1400,18 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
 
     def loadfile(self,event,filename=None):
         if self.skeining and self.skeinp is not None:
+            # A partir de aqui es el cancel hasta ##
+            print "Trabajo cancelado"
             self.skeinp.terminate()
+            self.skeinp.kill()
+            wx.CallAfter(self.loadbtn.SetLabel,_("Load File"))
+            self.skeining=0
+            self.skeinp=None
+            # Esto es una animalada
+            # pero para la espera activa del monitor
+            self.stopsf=1
             return
+        ####################################
         basedir=self.settings.last_file_path
         if not os.path.exists(basedir):
             basedir = "."
