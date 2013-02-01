@@ -1,0 +1,11 @@
+translate([53, 42, 0]) rotate([0, 0, 0]) import_stl("belt-clamp.stl");
+translate([85, 57, 0]) rotate([0, 0, 0]) import_stl("y-bushing.stl");
+translate([115, 99, 0]) rotate([0, 0, 0]) import_stl("frame-vertex-foot.stl");
+translate([105, 97, 0]) rotate([0, 0, -230]) import_stl("frame-vertex.stl");
+translate([82, 26, 0]) rotate([0, 0, 0]) import_stl("belt-clamp.stl");
+translate([67, 94, 0]) rotate([0, 0, 0]) import_stl("frame-vertex.stl");
+translate([122, 34, 0]) rotate([0, 0, 0]) import_stl("y-bushing.stl");
+translate([50, 25, 0]) rotate([0, 0, 0]) import_stl("belt-clamp.stl");
+translate([159, 51, 0]) rotate([0, 0, 0]) import_stl("y-bushing.stl");
+translate([123, 73, 0]) rotate([0, 0, 0]) import_stl("y-bushing.stl");
+translate([85, 84, 0]) rotate([0, 0, 0]) import_stl("belt-clamp.stl");
