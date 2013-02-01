@@ -6,4 +6,4 @@ set build_dimensions 200x200x300+0+0+0
 set xy_feedrate 15000
 set z_feedrate 160
 set e_feedrate 150
-set slicecommand /home/asimov/impresoras/giskard/scripts/remote_slice.sh $s $o
+set slicecommand /home/asimov/scripts/remote_slice.sh $s $o p_giskard@pulsar.unizar.es
