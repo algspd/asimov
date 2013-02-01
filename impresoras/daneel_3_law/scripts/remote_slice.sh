@@ -1,7 +1,7 @@
 #!/bin/bash
 filename=~/stl/$(basename $1)
 outname=$2
-remotehost=p_ester@pulsar.unizar.es
+remotehost=p_daneel@pulsar.unizar.es
 # Script para lanzar sliceado en remoto
 #echo "Borrando .skeinforge remoto"
 #ssh $remotehost 'rm -rf .skeinforge'
