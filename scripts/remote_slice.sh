@@ -13,7 +13,7 @@ rsync -avzP ~/.skeinforge/ p_ester@pulsar.unizar.es:
 echo "Copiando fichero stl"
 scp "$1" $remotehost:stl/
 
-ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)"
+ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)" | strings
 
 scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $outname
 
