@@ -1,4 +1,5 @@
 #!/bin/bash
+trap "exit 1" SIGINT SIGTERM
 filename=~/stl/$(basename $1)
 outname=$2
 remotehost=p_giskard@pulsar.unizar.es
