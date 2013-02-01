@@ -1,6 +1,0 @@
-Script to use remote slicer vie ssh.
-
-Needed:
- * Conection whithout password (RSA)
- * Configure pronterface/pronsole to use the script as slicer: [path to script]/remote_slice.sh $s $o
- * Must be a folder $HOME/stl in the remote machine
