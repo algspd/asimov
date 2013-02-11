@@ -1,3 +1,4 @@
 *.gcode
 !*plate*.gcode
+!*impresora*.gcode
 *.pyc
