@@ -1,11 +1,19 @@
 #!/bin/bash
-trap "exit 1" SIGINT SIGTERM
+trap "exit 1" SIGTERM
+
+if [ -z $1 ];then
+  echo "Usage: $0 filename outname remotehost"
+  exit 1
+fi
 
 filename=~/stl/$(basename $1)
 outname=$2
-#remotehost=p_ester@pulsar.unizar.es
-remotehost=$3
+host=pulsar.unizar.es
+remotehost=p_${3}@$host
 # Script para lanzar sliceado en remoto
+unlink $HOME/.skeinforge
+ln -s /home/asimov/impresoras/${3}/dot-skeinforge ${HOME}/.skeinforge
+python /home/asimov/software/Printrun/skeinforge/skeinforge_application/skeinforge.py
 #echo "Borrando .skeinforge remoto"
 #ssh $remotehost 'rm -rf .skeinforge'
 echo "Copiando .skeinforge"
