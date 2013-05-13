@@ -2,17 +2,17 @@
 trap "exit 1" SIGTERM
 
 if [ -z $1 ];then
-  echo "Usage: $0 filename outname remotehost"
+  echo "Usage: $0 filename printer"
   exit 1
 fi
 
 filename=~/stl/$(basename $1)
-outname=$2
 host=pulsar.unizar.es
-remotehost=p_${3}@$host
+printer=$2
+remotehost=p_$printer@$host
 # Script para lanzar sliceado en remoto
 unlink $HOME/.skeinforge
-ln -s /home/asimov/impresoras/${3}/dot-skeinforge ${HOME}/.skeinforge
+ln -s /home/asimov/impresoras/$printer/dot-skeinforge ${HOME}/.skeinforge
 python /home/asimov/software/Printrun/skeinforge/skeinforge_application/skeinforge.py
 #echo "Borrando .skeinforge remoto"
 #ssh $remotehost 'rm -rf .skeinforge'
@@ -26,4 +26,4 @@ scp "$1" $remotehost:stl/
 
 ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)" | strings
 
-scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $outname
+scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $(basename "${filename%.*}_$printer.gcode")
