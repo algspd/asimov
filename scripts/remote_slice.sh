@@ -26,4 +26,6 @@ scp "$1" $remotehost:stl/
 
 ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)" | strings
 
-scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $(basename "${filename%.*}_$printer.gcode")
+#scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $(basename "${filename%.*}_$printer.gcode")
+scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") ${printer}@${printer}:gcode/$(basename "${filename%.*}_$printer.gcode")
+
