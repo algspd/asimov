@@ -1,18 +1,18 @@
 Part						Columns	Rows
 biggearmod_fixed.stl				2	2
 smallgearmod_fixed.stl				
-endstop.stl					
+endstop.stl					4	8
 z-bottom-left.stl				
 z-bottom-right.stl				
 z-top-left.stl					
 z-top-right.stl					
-extrusor_wade/gregs-wade-v4.stl			
+extrusor_wade/gregs-wade-v4.stl			1	1 (rotura)
 extrusor_wade/x-carriageV2.stl			2	3
 gregs-extruder-v3-idler-mod.stl			
-opcional/belt-guide.stl				
-x-end-idler.stl					
-x-end-motor.stl					
-y-belt-holder.stl				
-y-corner.stl					
-y-idler.stl					
-y-motor.stl					
+opcional/belt-guide.stl				8	8
+x-end-idler.stl					1	1 (rotura)
+x-end-motor.stl					1	1 (rotura)
+y-belt-holder.stl				3	7
+y-corner.stl					7	3
+y-idler.stl					7	5
+y-motor.stl					6	3
