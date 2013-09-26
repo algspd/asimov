@@ -17,7 +17,7 @@ drill	False
 dwindle	False
 export	False
 feed	False
-fill	False
+fill	True
 fillet	False
 flow	False
 home	False
@@ -28,7 +28,7 @@ lash	False
 lift	False
 limit	False
 mill	False
-multiply	True
+multiply	False
 oozebane	False
 outset	False
 preface	False
