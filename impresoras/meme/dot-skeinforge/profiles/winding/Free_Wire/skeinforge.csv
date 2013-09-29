@@ -1,9 +1,9 @@
 Format is tab separated skeinforge settings.
 _Name                          	Value
-WindowPosition	400+25
-Open File for Skeinforge	/home/renosis/Downloads/skeinforge/skeinforge_application/test.stl
+WindowPosition	346+45
+Open File for Skeinforge	/home/renosis/Downloads/BallSocket.stl
 analyze	False
-craft	True
+craft	False
 help	False
 meta	False
-profile	False
+profile	True

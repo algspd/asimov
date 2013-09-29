@@ -12,7 +12,7 @@ clip	False
 coil	False
 comb	False
 cool	False
-dimension	True
+dimension	False
 drill	False
 dwindle	False
 export	False
@@ -37,7 +37,7 @@ scale	False
 skin	False
 skirt	False
 smooth	False
-speed	False
+speed	True
 splodge	False
 stretch	False
 temperature	False

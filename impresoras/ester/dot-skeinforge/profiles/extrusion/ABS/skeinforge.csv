@@ -1,7 +1,7 @@
 Format is tab separated skeinforge settings.
 _Name                          	Value
-WindowPosition	258+30
-Open File for Skeinforge	/home/renosis/Downloads/EscapementTestJig-FewerTeeth-Thicker-Pendulum.stl
+WindowPosition	346+45
+Open File for Skeinforge	
 analyze	False
 craft	True
 help	False

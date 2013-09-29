@@ -3,6 +3,8 @@ M140 S100
 G28 (--Home all Axis ---)
 M190 S75 (--Wait for the bed to get 75C ---)
 M109 S190 (-- Wait for the hotend to get 190 ---)
+M104 S220
+M140 S100
 G21 (Set units to mm)
 G90 (Absolute coordinates)
 G28 (--Home all Axis ---)

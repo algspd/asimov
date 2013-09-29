@@ -3,4 +3,4 @@ _Name                          	Value
 WindowPosition	700+0
 Open File for Home	
 Activate Home	True
-Name of Homing File:	homing.gcode
+Name of Home File:	home.gcode
