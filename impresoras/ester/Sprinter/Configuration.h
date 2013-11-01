@@ -43,7 +43,7 @@ const bool ENDSTOPS_INVERTING = false; //set to true to invert the logic of the 
 #define BAUDRATE 115200
 
 // Comment out (using // at the start of the line) to disable SD support:
-#define SDSUPPORT 1
+//#define SDSUPPORT 1
 
 
 //// ADVANCED SETTINGS - to tweak parameters
@@ -77,12 +77,12 @@ const bool INVERT_E_DIR = false;
 const bool min_software_endstops = false; //If true, axis won't move to coordinates less than zero.
 const bool max_software_endstops = true;  //If true, axis won't move to coordinates greater than the defined lengths below.
 const int X_MAX_LENGTH = 200;
-const int Y_MAX_LENGTH = 200;
+const int Y_MAX_LENGTH = 180;
 const int Z_MAX_LENGTH = 300;
 
 //// MOVEMENT SETTINGS
 const int NUM_AXIS = 4; // The axis order in all axis related arrays is X, Y, Z, E
-float max_feedrate[] = {500000, 500000, 240, 50000};
+float max_feedrate[] = {500000, 500000, 160, 50000};
 float homing_feedrate[] = {10000,10000,160};
 bool axis_relative_modes[] = {false, false, false, false};
 
