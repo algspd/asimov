@@ -23,7 +23,7 @@
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
 
-float axis_steps_per_unit[] = {81.293,81.293,4046,700};
+float axis_steps_per_unit[] = {81.293,81.293,3900,700};
 // Metric Prusa Mendel with Makergear geared stepper extruder:
 //float axis_steps_per_unit[] = {80,80,3200/1.25,1380}; 
 // MakerGear Hybrid Prusa Mendel:
@@ -43,7 +43,7 @@ const bool ENDSTOPS_INVERTING = false; //set to true to invert the logic of the 
 #define BAUDRATE 115200
 
 // Comment out (using // at the start of the line) to disable SD support:
-//#define SDSUPPORT 1
+#define SDSUPPORT 0
 
 
 //// ADVANCED SETTINGS - to tweak parameters
@@ -77,12 +77,12 @@ const bool INVERT_E_DIR = false;
 const bool min_software_endstops = false; //If true, axis won't move to coordinates less than zero.
 const bool max_software_endstops = true;  //If true, axis won't move to coordinates greater than the defined lengths below.
 const int X_MAX_LENGTH = 200;
-const int Y_MAX_LENGTH = 180;
+const int Y_MAX_LENGTH = 190;
 const int Z_MAX_LENGTH = 300;
 
 //// MOVEMENT SETTINGS
 const int NUM_AXIS = 4; // The axis order in all axis related arrays is X, Y, Z, E
-float max_feedrate[] = {500000, 500000, 160, 50000};
+float max_feedrate[] = {8000, 8000, 160, 50000};
 float homing_feedrate[] = {10000,10000,160};
 bool axis_relative_modes[] = {false, false, false, false};
 
