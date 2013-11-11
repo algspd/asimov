@@ -43,7 +43,7 @@ const bool ENDSTOPS_INVERTING = false; //set to true to invert the logic of the 
 #define BAUDRATE 115200
 
 // Comment out (using // at the start of the line) to disable SD support:
-#define SDSUPPORT 0
+//#define SDSUPPORT 1
 
 
 //// ADVANCED SETTINGS - to tweak parameters
