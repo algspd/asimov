@@ -1,4 +1,4 @@
-  /* Arduino Sd2Card Library
+/* Arduino Sd2Card Library
  * Copyright (C) 2009 by William Greiman
  *
  * This file is part of the Arduino Sd2Card Library
@@ -17,7 +17,7 @@
  * along with the Arduino Sd2Card Library.  If not, see
  * <http://www.gnu.org/licenses/>.
  */
-#include <Arduino.h> 
+#include <WProgram.h>
 #include "Sd2Card.h"
 //------------------------------------------------------------------------------
 #ifndef SOFTWARE_SPI
