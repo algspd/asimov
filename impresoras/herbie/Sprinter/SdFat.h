@@ -283,7 +283,7 @@ class SdFile : public Print {
   }
   /** \return SdVolume that contains this file. */
   SdVolume* volume(void) const {return vol_;}
-  size_t write(uint8_t b); 
+  void write(uint8_t b);
   int16_t write(const void* buf, uint16_t nbyte);
   void write(const char* str);
   void write_P(PGM_P str);
