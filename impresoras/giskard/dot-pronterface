@@ -1,4 +1,4 @@
-set last_file_path /home/javier/Downloads
+set last_file_path /home/user/Downloads
 set port /dev/ttyACM0
 set last_temperature 230.0
 set last_bed_temperature 100.0

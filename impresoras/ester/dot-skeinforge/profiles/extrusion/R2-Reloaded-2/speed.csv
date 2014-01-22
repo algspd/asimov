@@ -8,8 +8,8 @@ Bridge Feed Rate Multiplier (ratio):	0.25
 Bridge Flow Rate Multiplier (ratio):	0.25
 Duty Cyle at Beginning (portion):	1.0
 Duty Cyle at Ending (portion):	0.0
-Feed Rate (mm/s):	120.0
-Flow Rate Setting (float):	120.0
+Feed Rate (mm/s):	70.0
+Flow Rate Setting (float):	70.0
 Object First Layer Feed Rate Infill Multiplier (ratio):	0.3
 Object First Layer Feed Rate Perimeter Multiplier (ratio):	0.3
 Object First Layer Flow Rate Infill Multiplier (ratio):	0.2
