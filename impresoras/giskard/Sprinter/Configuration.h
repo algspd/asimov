@@ -23,7 +23,7 @@
 //// Calibration variables
 // X, Y, Z, E steps per unit - Metric Prusa Mendel with Wade extruder:
 
-float axis_steps_per_unit[] = {81.293,81.293,3900,700};
+float axis_steps_per_unit[] = {80,80,4000,700};
 // Metric Prusa Mendel with Makergear geared stepper extruder:
 //float axis_steps_per_unit[] = {80,80,3200/1.25,1380}; 
 // MakerGear Hybrid Prusa Mendel:
@@ -43,7 +43,7 @@ const bool ENDSTOPS_INVERTING = false; //set to true to invert the logic of the 
 #define BAUDRATE 115200
 
 // Comment out (using // at the start of the line) to disable SD support:
-#define SDSUPPORT 0
+//#define SDSUPPORT 1
 
 
 //// ADVANCED SETTINGS - to tweak parameters
