@@ -1,9 +1,0 @@
-Format is tab separated alteration settings.
-_Name                          	Value
-WindowPosition	700+0
-Open File for Alteration	
-Activate Alteration	True
-Name of End File:	endP1.gcode
-Name of Start File:	startP1.gcode
-Remove Redundant Mcode	True
-Replace Variable with Setting	True
