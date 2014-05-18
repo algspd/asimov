@@ -1,9 +1,0 @@
-Format is tab separated skeinforge settings.
-_Name                          	Value
-WindowPosition	346+45
-Open File for Skeinforge	/home/renosis/Downloads/BallSocket.stl
-analyze	False
-craft	False
-help	False
-meta	False
-profile	True
