@@ -30,7 +30,8 @@ echo "Copiando fichero de $remotehost a localhost"
 scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $(basename "${filename%.*}_$printer.gcode")
 echo "Copiando fichero de localhost a octoprint@${printer}"
 echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/"
-scp $(basename "${filename%.*}_$printer.gcode") octoprint@${printer}:/home/octoprint/.octoprint/uploads/
+echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename \"${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode\")"
+scp $(basename "${filename%.*}_$printer.gcode") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename "${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode")
 
 echo "Copiado fichero a octoprint@${printer}"
 
