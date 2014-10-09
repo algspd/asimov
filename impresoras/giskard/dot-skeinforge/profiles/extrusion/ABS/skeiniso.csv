@@ -2,7 +2,7 @@ Format is tab separated skeiniso settings.
 _Name                          	Value
 WindowPosition	700+0
 Open File for Skeiniso	
-Activate Skeiniso	True
+Activate Skeiniso	False
 Frame List
 Animation Line Quickening (ratio):	1.0
 Animation Slide Show Rate (layers/second):	2.0
@@ -16,7 +16,7 @@ Draw Arrows	False
 Go Around Extruder Off Travel	False
 Layer (index):	0
 Layer Extra Span (integer):	912345678
-Line (index):	23
+Line (index):	0
 Display Line	True
 View Move	False
 View Rotate	False

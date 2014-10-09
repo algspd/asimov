@@ -20,8 +20,8 @@ Grid Circular	False
 Grid Hexagonal	True
 Grid Rectangular	False
 Line	False
-Infill Perimeter Overlap (ratio):	0.2
-Infill Solidity (ratio):	0.2
+Infill Perimeter Overlap (ratio):	0.15
+Infill Solidity (ratio):	0.25
 Sharpest Angle (degrees):	60.0
 Solid Surface Thickness (layers):	3
 Lower Left	True
@@ -30,6 +30,6 @@ Surrounding Angle (degrees):	60.0
 Infill > Loops > Perimeter	False
 Infill > Perimeter > Loops	False
 Loops > Infill > Perimeter	False
-Loops > Perimeter > Infill	True
+Loops > Perimeter > Infill	False
 Perimeter > Infill > Loops	False
-Perimeter > Loops > Infill	False
+Perimeter > Loops > Infill	True

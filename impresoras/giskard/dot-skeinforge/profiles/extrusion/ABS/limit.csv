@@ -3,5 +3,4 @@ _Name                          	Value
 WindowPosition	700+0
 Open File for Limit	
 Activate Limit	True
-Maximum Initial Feed Rate (mm/s):	1.0
-Maximum Z Feed Rate (mm/s):	1.0
+Maximum Initial Feed Rate (mm/s):	200.0
