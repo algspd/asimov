@@ -19,7 +19,7 @@
  */
 #include "SdFat.h"
 #include <avr/pgmspace.h>
-#include <WProgram.h>
+#include <Arduino.h>
 //------------------------------------------------------------------------------
 // callback function for date/time
 void (*SdFile::dateTime_)(uint16_t* date, uint16_t* time) = NULL;
@@ -1219,7 +1219,8 @@ int16_t SdFile::write(const void* buf, uint16_t nbyte) {
  *
  * Use SdFile::writeError to check for errors.
  */
-void SdFile::write(uint8_t b) {
+size_t SdFile::write(uint8_t b) 
+{ 
   write(&b, 1);
 }
 //------------------------------------------------------------------------------
