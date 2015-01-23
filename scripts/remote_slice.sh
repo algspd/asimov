@@ -1,15 +1,18 @@
 #!/bin/bash
 trap "exit 1" SIGTERM
 
-if [ -z $1 ];then
+if [ -z "$1" ];then
   echo "Usage: $0 filename printer"
   exit 1
 fi
 
-filename=~/stl/$(basename $1)
+filename=~/stl/$(basename "$1")
 host=pulsar.unizar.es
 printer=$2
 remotehost=p_$printer@$host
+
+echo $filename
+
 # Script para lanzar sliceado en remoto
 unlink $HOME/.skeinforge
 ln -s /home/asimov/impresoras/$printer/dot-skeinforge ${HOME}/.skeinforge
@@ -24,14 +27,14 @@ rsync -azPL ~/.skeinforge ${remotehost}:
 echo "Copiando fichero stl"
 scp "$1" $remotehost:stl/
 
-ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py stl/$(basename $filename)" | strings
+ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py \"stl/$(basename "$filename")\"" | strings
 
 echo "Copiando fichero de $remotehost a localhost"
-scp $remotehost:stl/$(basename "${filename%.*}_export.gcode") $(basename "${filename%.*}_$printer.gcode")
+scp "$remotehost:stl/$(basename "${filename%.*}_export.gcode")" "$(basename "${filename%.*}_$printer.gcode")"
 echo "Copiando fichero de localhost a octoprint@${printer}"
-echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/"
+#echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/"
 echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename \"${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode\")"
-scp $(basename "${filename%.*}_$printer.gcode") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename "${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode")
+scp "$(basename "${filename%.*}_$printer.gcode")" "octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename "${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode")"
 
 echo "Copiado fichero a octoprint@${printer}"
 
