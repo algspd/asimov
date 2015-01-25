@@ -6,8 +6,11 @@ if [ -z "$1" ];then
   exit 1
 fi
 
+#rename 's/[^a-zA-Z0-9.]/_/g' "$1"
+#file=$(echo "$1"|sed 's/[^a-zA-Z0-9.]/_/g')
+file=$(rename -f -v 's/[^a-zA-Z0-9.]/_/g' "$1" | sed 's/.*renamed as //')
 
-filename=~/stl/$(basename "$1")
+filename=~/stl/$(basename "$file")
 host=pulsar.unizar.es
 printer=$2
 remotehost=p_$printer@$host
@@ -31,11 +34,12 @@ scp "$file" $remotehost:stl/
 ssh $remotehost "python /opt/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py \"stl/$(basename "$filename")\"" | strings
 
 echo "Copiando fichero de $remotehost a localhost"
-scp "$remotehost:stl/$(basename "${filename%.*}_export.gcode")" "$(basename "${filename%.*}_$printer.gcode")"
+scp "$remotehost:\"stl/$(basename "${filename%.*}_export.gcode")\"" "$(basename "${filename%.*}_$printer.gcode")"
+
 echo "Copiando fichero de localhost a octoprint@${printer}"
 #echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/"
-echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename \"${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode\")"
-scp "$(basename "${filename%.*}_$printer.gcode")" "octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename "${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode")"
+#echo "scp $(basename \"${filename%.*}_$printer.gcode\") octoprint@${printer}:/home/octoprint/.octoprint/uploads/$(basename \"${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode\")"
+scp "$(basename "${filename%.*}_$printer.gcode")" "octoprint@${printer}:\"/home/octoprint/.octoprint/uploads/$(basename "${filename%.*}_${printer}_$(date +%Y%m%d%H%M%S).gcode")\""
 
 echo "Copiado fichero a octoprint@${printer}"
 
