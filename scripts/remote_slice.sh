@@ -6,10 +6,8 @@ if [ -z "$1" ];then
   exit 1
 fi
 
-rename 's/ /_/g' "$1"
-file=`echo "$1"|sed 's/ /_/g'`
 
-filename=~/stl/$(basename "$file")
+filename=~/stl/$(basename "$1")
 host=pulsar.unizar.es
 printer=$2
 remotehost=p_$printer@$host
