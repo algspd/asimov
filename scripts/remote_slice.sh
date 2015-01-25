@@ -8,7 +8,13 @@ fi
 
 #rename 's/[^a-zA-Z0-9.]/_/g' "$1"
 #file=$(echo "$1"|sed 's/[^a-zA-Z0-9.]/_/g')
-file=$(rename -f -v 's/[^a-zA-Z0-9.]/_/g' "$1" | sed 's/.*renamed as //')
+out=$(rename -f -v 's/[^a-zA-Z0-9.]/_/g' "$1" | sed 's/.*renamed as //')
+if [[ a$out == a ]] ; then
+  file="$1"
+else
+  echo "Renombrando de $1 a $out"
+  file="$out"
+fi
 
 filename=~/stl/$(basename "$file")
 host=pulsar.unizar.es
