@@ -5,3 +5,5 @@ Needed:
 * Configure pronterface/pronsole to use the script as slicer: [path to script]/remote_slice.sh $s $o
 * Must be a folder $HOME/stl in the remote machine
 * Must be skeinforge folder in /opt/ in the remote machine
+* The asimov repository must be in /home in the local machine
+* In order to have parameter completion append the file dot-bash_completion to ~/.bash_completion

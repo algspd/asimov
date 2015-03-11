@@ -1,0 +1,22 @@
+_remoteslice() {
+   local cur=${COMP_WORDS[COMP_CWORD]}
+   #local prev=${COMP_WORDS[COMP_CWORD-1]}
+
+   case "$COMP_CWORD" in
+      2)
+         COMPREPLY=( $( compgen -W "$(echo meme giskard herbie ester daneel)" -- $cur ) )
+         return 0
+         ;;
+      1)
+         #COMPREPLY=( $( compgen -f -X '!*.[sS][tT][lL]' -- $cur ) )
+         _filedir stl
+         return 0
+         ;;
+      *)
+         COMPREPLY=( $( compgen -f -- $cur ) )
+         return 0
+         ;;
+   esac
+
+}
+complete -F _remoteslice remote_slice.sh 
