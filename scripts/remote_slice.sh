@@ -7,12 +7,13 @@ if [ -z "$1" ];then
 fi
 
 #rename 's/[^a-zA-Z0-9.]/_/g' "$1"
-#file=$(echo "$1"|sed 's/[^a-zA-Z0-9.]/_/g')
-out=$(rename -f -v 's/[^a-zA-Z0-9.]/_/g' "$1" | sed 's/.*renamed as //')
-if [[ a$out == a ]] ; then
+out=$(basename "$1"|sed 's/[^a-zA-Z0-9.]/_/g'|sed 's/^_//'|sed 's/_*$//')
+#out=$(rename -f -v 's/[^a-zA-Z0-9.]/_/g' "$1" | sed 's/.*renamed as //')
+if [[ a$out == a$(basename "$1") ]] ; then
   file="$1"
 else
-  echo "Renombrando de $1 a $out"
+  echo "Linked $1 as $out"
+  ln -s "$1" "$out"
   file="$out"
 fi
 
