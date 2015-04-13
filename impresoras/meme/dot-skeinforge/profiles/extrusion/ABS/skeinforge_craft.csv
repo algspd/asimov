@@ -23,12 +23,12 @@ flow	False
 home	False
 hop	False
 inset	False
-jitter	False
+jitter	True
 lash	False
 lift	False
 limit	False
 mill	False
-multiply	True
+multiply	False
 oozebane	False
 outset	False
 preface	False
